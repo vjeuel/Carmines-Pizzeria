@@ -1,0 +1,438 @@
+/* FONTS
+----------------------------------------------- */
+/* 
+font-family: 'Alata', sans-serif;
+font-family: 'Halant', 'Raleway', serif; 
+font-family: 'Halant Semi-Bold', 'Raleway', serif; 
+------------------------------------------------*/
+
+h1, h2, h3 {
+   font-family: 'Halant Semi-Bold', 'Raleway', serif;
+   text-align: center;
+}
+
+h4 {
+   font-family: 'Halant', 'Raleway', serif;
+   text-align: center;
+}
+
+h5, h6, p, a {
+   font-family: 'Alata', sans-serif;
+   text-align: center;
+}
+
+body {
+   background-color: black;
+}
+
+
+/* NAV
+----------------------------------------------- */
+header .container {
+   background-color: rgba(0, 96, 52, 0.9);
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   position: fixed;
+   right: 0rem;
+   left: 0rem;
+   z-index: 5;
+}
+
+nav .row {
+   padding: 20px;
+}
+
+nav .col-12 {
+   justify-self: center;
+   align-self: center;
+}
+
+nav .col-12 a {
+   font-size: 1.5rem;
+   text-transform: uppercase;
+   color: white;
+   border-radius: 10px;
+   padding: 5px 8px;
+   margin: 0 30px;
+   letter-spacing: 0.15rem;
+}
+
+nav .col-12 a:hover {
+   color: var(--pale);
+   border-bottom: var(--pale) 2px solid;
+   border-top: var(--pale) 2px solid;
+   transition: color ease-in 1s, 
+               border-bottom ease 0.1s 0.25s,
+               border-top ease 0.1s 0.5s;
+}
+
+nav .col-12 a:nth-child(1) {
+   color: white;
+   border-radius: 5px;
+   border: solid 2px var(--lg);
+   padding: 8px;
+   margin-left: 0;
+   animation: phone-border ease-in-out 2s infinite alternate;
+}
+
+nav .col-12 a:nth-child(1):hover {
+   background-color: var(--lg);
+   color: var(--dg);
+   transition: background-color ease-out 0.5s, color ease-in 1s 0.25s;
+   animation: none;
+}
+
+@keyframes phone-border {
+   from {
+      border: solid 2px var(--lg);
+      box-shadow: 0 0 10px var(--lg), 0 0 20px var(--lg);
+   }
+   to {
+      border: solid 2px white;
+      box-shadow: 0 0 5px var(--lg), 0 0 10px var(--lg);
+   }
+}
+
+nav .col-12 a:nth-child(5) {
+   color: white;
+   background-color: var(--red);
+   border-radius: 5px;
+   border: solid 2px var(--red);
+   padding: 8px 20px;
+   margin-right: 0;
+   animation: order-online ease-in 2s infinite alternate;
+}
+
+nav .col-12 a:nth-child(5):hover {
+   background-color: var(--lg);
+   color: var(--dg);
+   border: solid 2px var(--lg);
+   transition: background-color ease-out 0.5s, 
+               color ease-in 1s 0.25s,
+               border ease-out 0.5s;
+   animation: none;
+}
+
+@keyframes order-online {
+   from {
+      background-color: var(--or);
+      border: solid 2px var(--or);
+      box-shadow: 0 0 10px var(--or), 0 0 20px var(--or);
+   }
+   to {
+      background-color: var(--red);
+      border: solid 2px var(--red);
+      box-shadow: 0 0 0px var(--or), 0 0 5px var(--or);
+   }
+}
+
+/* FIRST PAGE
+----------------------------------------------- */
+ .full-width {
+   background-image: url(/img/iStock_000030291918_Full.jpg);
+}
+
+#big-logo {
+   grid-row: 1;
+}
+
+#big-logo .row {
+   justify-items: center;
+}
+
+.logo {
+   width: 450px;
+   justify-self: center;
+   margin-top: 100px;
+   animation: logo ease-in-out 3s infinite alternate;
+}
+
+@keyframes logo {
+   from {
+      filter: brightness(1);
+   }
+   to {
+      filter: brightness(1.5);
+   }
+}
+
+.ny-phrase h2 {
+   color: white;
+   background-color: rgba(208, 52, 39, 0.9);
+   border-radius: 20px;
+   padding: 10px 50px;
+   margin-top: 10px;
+}
+
+.new-hours h4 {
+   font-weight: 600;
+   color: white;
+   background-color: rgba(0, 96, 52, 0.9);
+   border: white 2px solid;
+   border-radius: 20px;
+   padding: 10px 50px;
+   margin-top: 50px;
+}
+
+
+/* BYOB - NEON
+----------------------------------------------- */
+.byob {
+   background-color: rgba(0, 0, 0, 1);
+   width: 100%;
+   text-align: center;
+   margin-top: 100px;
+   background: #000000;
+   background: linear-gradient(to right,
+               rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%,
+               rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+}
+
+.neon {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+   padding: 60px;
+   justify-items: center;
+   align-content: center;
+}
+
+.byob #purple {
+   font-family: 'Monoton', 'Raleway', serif; 
+   font-size: 10rem;
+   letter-spacing: 12px;
+   color: white;
+   grid-area: 1 / 1 / span 1 / span 1;
+   border: white 8px solid;
+   border-radius: 30px;
+   padding: 40px;
+   z-index: 3;
+   animation: purple-neon 1s ease-in-out infinite alternate;
+}
+
+.byob #cyan {
+   font-family: 'Monoton', 'Raleway', serif;
+   font-size: 10rem;
+   letter-spacing: 12px;
+   color: cyan;
+   grid-area: 1 / 1 / span 1 / span 1;
+   border: white 8px solid;
+   border-radius: 30px;
+   padding: 40px;
+   z-index: 2;
+   animation: cyan-neon-inset 1.5s ease-in-out infinite alternate;
+}
+
+.byob #black {
+   font-family: 'Monoton', 'Raleway', serif;
+   font-size: 10rem;
+   letter-spacing: 12px;
+   color: black;
+   grid-area: 1 / 1 / span 1 / span 1;
+   border: white 8px solid;
+   border-radius: 30px;
+   padding: 40px;
+   z-index: 2;
+   animation: cyan-neon-outset 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes purple-neon {
+   from {
+     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+   }
+   to {
+     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+   }
+ }
+
+@keyframes cyan-neon-inset {
+   from {
+     box-shadow: inset 0 0 10px #fff, inset 0 0 20px #fff, inset 0 0 30px #fff, inset 0 0 40px #50BFE6, inset 0 0 70px #50BFE6;
+   }
+   to {
+     box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 15px #fff, inset 0 0 20px #50BFE6, inset 0 0 35px #50BFE6;
+   }
+ }
+
+@keyframes cyan-neon-outset {
+   from {
+     box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #50BFE6, 0 0 70px #50BFE6, 0 0 80px #50BFE6;
+   }
+   to {
+     box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #50BFE6, 0 0 35px #50BFE6, 0 0 40px #50BFE6;
+   }
+ }
+
+/* MENU
+----------------------------------------------- */
+#menu .full-width {
+   background: linear-gradient( 0deg, black 0%, 
+                  var(--red) 40%, var(--or) 50%, 
+                  var(--red) 60%, black 100%);
+}
+
+#menu .row {
+   padding: 0px;
+   margin: 20px 0;
+}
+#menu-out {
+   width: 100%;
+   margin: 0px;
+}  
+
+#menu-ins {
+   width: 100%;
+   margin: 0px;
+}  
+
+
+/* ABOUT US
+----------------------------------------------- */
+#about-us .full-width {
+   background-image: none;
+   padding-top: 50px;
+   background: linear-gradient(135deg, var(--or) 0%,
+   var(--pale) 20%, var(--pale) 80%, var(--or) 100%);
+}
+
+#about-us .row {
+   justify-items: center;
+   align-items: center;
+   margin: 50px;
+   padding: 0px;
+}
+
+#about-us img {
+   box-sizing: border-box;
+   width: 100%;
+   border-radius: 20px;
+   border: 4px solid var(--dg);
+}
+
+#about-us h1 {
+   color: var(--dg);
+   border-bottom: 3px solid var(--dg);
+   border-radius: 20px;
+   padding: 0 30px;
+}
+
+#about-us h4 {
+   color: var(-dg);
+   text-align: left;
+   line-height: 1.5;
+   padding-left: 20px;
+}
+
+
+/* CONTACT US
+----------------------------------------------- */
+#contact-us .full-width {
+   background-image: none;
+   padding-top: 50px;
+   background: linear-gradient(135deg, var(--or) 0%,
+   var(--pale) 20%, var(--pale) 80%, var(--or) 100%);
+}
+
+#contact-us .row {
+   justify-items: center;
+   align-items: center;
+   margin: 50px;
+   padding: 0px;
+}
+
+#contact-us h1 {
+   color: var(--dg);
+   border-bottom: 3px solid var(--dg);
+   border-radius: 20px;
+   padding: 0 30px;
+}
+
+#contact-us .grid-2 {
+   border:  red solid 2px;
+   z-index: 2;
+}
+
+#contact-us iframe {
+   width: 100%;
+   height: 200px;
+}
+
+#contact-us h3 {
+   font-weight: 600;
+   text-align: left;
+}
+
+#contact-us h5 {
+   text-align: left;
+   line-height: 1;
+}
+
+
+
+
+
+/* --------------------------------------------
+UTILITIES
+----------------------------------------------- */
+/* COLORS
+----------------------------------------------- */
+/* Color Theme Swatches in RGBA */
+.Red-and-Green-Complimentary-1-rgba { color: rgba(0, 96, 52, 1); }
+.Red-and-Green-Complimentary-2-rgba { color: rgba(101, 166, 3, 1); }
+.Red-and-Green-Complimentary-3-rgba { color: rgba(242, 228, 201, 1); }
+.Red-and-Green-Complimentary-4-rgba { color: rgba(248, 101, 12, 1); }
+.Red-and-Green-Complimentary-5-rgba { color: rgba(208, 52, 39, 1); }
+
+:root {
+   --dg: rgba(0, 96, 52, 1);
+   --lg: rgba(101, 166, 3, 1);
+   --pale: rgba(242, 228, 201, 1);
+   --or: rgba(248, 101, 12, 1);
+   --red: rgba(208, 52, 39, 1);
+}
+
+
+/* FONT FACE
+----------------------------------------------- */
+@font-face {
+   font-family: 'Alata';
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;
+   src:  local('Alata Regular'), local('Alata-Regular'), 
+         url(https://fonts.gstatic.com/s/alata/v1/PbytFmztEwbIoce9zqYzQ1OW.woff2) format('woff2'),
+         url(/fonts/Alata/Alata-Regular.ttf);
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+ }
+
+ @font-face {
+   font-family: 'Halant';
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;
+   src:  local('Halant Regular'), local('Halant-Regular'), 
+         url(https://fonts.gstatic.com/s/halant/v7/u-4-0qaujRI2Pbsn2NhnsS5mew.woff2) format('woff2'),
+         url(/fonts/Halant/Halant-Regular.ttf);
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+ }
+
+ @font-face {
+   font-family: 'Halant Semi-Bold';
+   font-style: normal;
+   font-weight: 600;
+   font-display: swap;
+   src:  local('Halant SemiBold'), local('Halant-SemiBold'),
+         url(https://fonts.gstatic.com/s/halant/v7/u-490qaujRI2PbsvB_xynAxrUQRBXw.woff2) format('woff2'),
+         url(/fonts/Halant/Halant-SemiBold.ttf);
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+   font-family: 'Monoton';
+   font-style: normal;
+   font-weight: 400;
+   src: local('Monoton'), local('Monoton-Regular'), url(https://fonts.gstatic.com/s/monoton/v9/5h1aiZUrOngCibe4TkHLQka4BU4.woff2) format('woff2');
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+ }
+ 
