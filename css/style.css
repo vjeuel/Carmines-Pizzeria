@@ -39,25 +39,23 @@ header .container {
 }
 
 nav .row {
-   padding: 20px;
+   grid-template-columns: repeat(5, 1fr);
+   padding: 10px;
+   align-items: center;
+   
 }
 
-nav .col-12 {
-   justify-self: center;
-   align-self: center;
-}
-
-nav .col-12 a {
+nav a {
    font-size: 1.5rem;
    text-transform: uppercase;
    color: white;
    border-radius: 10px;
-   padding: 5px 8px;
-   margin: 0 30px;
+   padding: 0 8px;
+   margin: 0;
    letter-spacing: 0.15rem;
 }
 
-nav .col-12 a:hover {
+nav a:hover {
    color: var(--pale);
    border-bottom: var(--pale) 2px solid;
    border-top: var(--pale) 2px solid;
@@ -66,7 +64,7 @@ nav .col-12 a:hover {
                border-top ease 0.1s 0.5s;
 }
 
-nav .col-12 a:nth-child(1) {
+nav a:nth-child(1) {
    color: white;
    border-radius: 5px;
    border: solid 2px var(--lg);
@@ -75,7 +73,7 @@ nav .col-12 a:nth-child(1) {
    animation: phone-border ease-in-out 2s infinite alternate;
 }
 
-nav .col-12 a:nth-child(1):hover {
+nav a:nth-child(1):hover {
    background-color: var(--lg);
    color: var(--dg);
    transition: background-color ease-out 0.5s, color ease-in 1s 0.25s;
@@ -93,7 +91,7 @@ nav .col-12 a:nth-child(1):hover {
    }
 }
 
-nav .col-12 a:nth-child(5) {
+nav a:nth-child(5) {
    color: white;
    background-color: var(--red);
    border-radius: 5px;
@@ -103,7 +101,7 @@ nav .col-12 a:nth-child(5) {
    animation: order-online ease-in 2s infinite alternate;
 }
 
-nav .col-12 a:nth-child(5):hover {
+nav a:nth-child(5):hover {
    background-color: var(--lg);
    color: var(--dg);
    border: solid 2px var(--lg);
@@ -275,15 +273,10 @@ nav .col-12 a:nth-child(5):hover {
    padding: 0px;
    margin: 20px 0;
 }
-#menu-out {
+#menu-out, #menu-ins {
    width: 100%;
    margin: 0px;
-}  
-
-#menu-ins {
-   width: 100%;
-   margin: 0px;
-}  
+}
 
 
 /* ABOUT US
@@ -308,7 +301,6 @@ nav .col-12 a:nth-child(5):hover {
 #about-contact .col-6 {
    margin-bottom: 120px;;
 }
-
 
 #about-contact img {
    box-sizing: border-box;
@@ -406,10 +398,176 @@ nav .col-12 a:nth-child(5):hover {
 ----------------------------------------------- */
 footer {
    color: white;
-
-   border: red solid 2px
 }
 
+footer .full-width {
+   background-image: none;
+   background: linear-gradient(180deg, var(--dg) 0%, black 100%);
+   padding: 20px;
+}
+
+footer img {
+   height: 50px;
+   filter: brightness(100);
+}
+
+footer .row {
+   align-items: center;
+}
+
+footer .col-6 {
+   padding: 0 50px;
+}
+
+footer .col-6 h6 {
+   text-align: left;
+   font-style: normal;
+}
+
+footer .col-6:nth-child(2) {
+   text-align: right;
+}
+
+
+/* MEDIA QUERIES
+------------------------------------------------------------- */
+
+@media (min-width: 992px) {
+   #menu-small-screen {
+      display: none;
+   }
+
+}
+
+@media (min-width:768px) {
+   #about-us-small-screen {
+   display: none;
+   }
+
+   .contact-small-screen {
+      display: none;
+   }
+
+}
+
+@media (min-width:576px) {
+   /* header .nav-small-screen {
+      display: none; */
+   /* } */
+
+}
+
+
+@media (max-width: 992px) {
+   nav a {
+      font-size: 1.25rem;
+   }
+
+   #about-contact h4 {
+      font-size: 1.8rem;
+   }
+
+   .slideshow {
+      padding: 40px;
+      height: 160px;
+   }
+
+   .slide-1 {
+      height: 159px;
+   }
+
+   #menu {
+      display: none;
+   }
+}
+
+
+@media (max-width: 768px) {
+   nav row {
+      grid-gap: 0px;
+   }
+
+   .logo {
+      width: 350px;
+   }
+
+   .ny-phrase h2 {
+      font-size: 2.5rem;
+   }
+
+   .new-hours h4 {
+      font-size: 2rem;
+   }
+
+   #about-contact .row {
+      padding-top: 50px;
+   }
+
+   #about-contact .col-6 {
+      display: none;
+   }
+
+   #about-us-small-screen {
+      grid-column: 1 / span 12;
+   }
+
+   .slideshow {
+      width: 95%;
+   }
+
+   .contact-large-screen {
+      display: none;
+   }
+   
+   #about-contact .contact-small-screen h3,
+   #about-contact .contact-small-screen h5  {
+      text-align: center;
+   }
+   
+}
+
+@media (max-width: 576px) {
+   /* header .nav-large-screen {
+      display:  none;
+   } */
+
+   /* header .nav-small-screen {
+      width: 80%;
+   }
+
+   header .container {
+      width: 80%;
+      margin: 0;
+      padding: 0;
+   }
+
+   header .nav-small-screen .row {
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-columns: 1fr;
+      grid-auto-flow: column;
+      grid-gap: 20px;  
+   }
+
+   header a {
+      font-size: 2.5rem;
+   }
+
+   .logo {
+      width: 200px;
+      margin-top: 400px;
+   }
+
+   .ny-phrase h2 {
+      font-size: 2rem;
+   }
+
+   .new-hours {
+      display: none;
+   } */
+
+
+
+ }
 
 /* --------------------------------------------
 UTILITIES

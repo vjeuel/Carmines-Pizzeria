@@ -13,17 +13,28 @@
 <body>
    <!-- ***** HEADER ***** -->
    <header>
-      <nav class="container">
+      <nav class="container nav-large-screen">
          <div class="row">
-            <div class="col-12">
+            <a href="#phone">972 248-8110</a>
+            <a href="#menu">menu</a>
+            <a href="#specials">specials</a>
+            <a href="#contactus">contact us</a>
+            <a href="https://biteheist.com/ordering/tx/carminespizzeriadallas/" target="_blank">order online</a>
+         </div>
+      </nav>
+
+   <!-- ***** HEADER - SMALL SCREEN ***** -->
+      <div class="nav-small-screen">
+         <nav class="container">
+            <div class="row">
                <a href="#phone">972 248-8110</a>
                <a href="#menu">menu</a>
                <a href="#specials">specials</a>
                <a href="#contactus">contact us</a>
                <a href="https://biteheist.com/ordering/tx/carminespizzeriadallas/" target="_blank">order online</a>
             </div>
-         </div>
-      </nav>
+         </nav>
+      </div>
    </header>
    
    <!-- ***** FIRST PAGE ***** -->
@@ -70,6 +81,21 @@
       </div>
    </section>
 
+   <!-- ***** MENU - SMALL SCREEN ***** -->
+   <section id="menu-small-screen">
+      <div class="full-width">
+         <div class="row">
+            <div class="col-12">
+               <img id="menu-out" src="/img/Menu-Out.png" alt="">
+            </div>
+            <div class="col-12">
+               <img id="menu-ins" src="/img/Menu-Ins.png" alt="">
+            </div>
+         </div>
+      </div>
+
+   </section>
+
    <!-- ***** ABOUT US ***** -->
    <section id="about-contact">
       <div class="full-width">
@@ -87,8 +113,19 @@
                      New York, not Texas so you can be assured you are getting the original Italian flavors that made 
                      New York famous for authentic Italian dishes.</h4>
                </div>
-
-                  
+               
+               <!-- ***** ABOUT US - SMALL SCREEN ***** -->
+               <div id="about-us-small-screen">
+                  <div class="col-12">
+                     <img src="/img/iStock_000015909552_XXXLarge.jpg" alt="">
+                  </div>
+                  <div class="col-12">
+                     <h4>After 40 years of family owned and operated experience cooking authentic east-coast Italian food, 
+                        it’s safe to say that Pizza and Pasta is in our blood.  Our recipes were created and perfected in 
+                        New York, not Texas so you can be assured you are getting the original Italian flavors that made 
+                        New York famous for authentic Italian dishes.</h4>
+                  </div>
+               </div>
                   <!-- ***** SLIDESHOW ***** -->
                <div class="col-12 slideshow">
                   <div class="grid-auto slide-1">
@@ -109,19 +146,36 @@
                <div class="col-12">
                   <h1>CONTACT US</h1>
                </div>
-               <div class="grid-2">
+               <div class="grid-2 contact-large-screen">
                   <h3>Carmine's Pizzeria</h3>
                   <h5>7615 Campbell Road, Ste 104</h5>
                   <h5>Dallas, TX 75248</h5>
                   <h3>972 248-8110</h3>
-                  <h>cagupi@hotmail.com</h>
+                  <h5>cagupi@hotmail.com</h5>
                </div>
-               <div class="grid-2">
+               <div class="grid-2 contact-large-screen">
                   <h3>Our Hours</h3>
                   <h5>Sun - Mon: 4PM - 9PM</h5>
                   <h5>Tue - Thu: 11AM - 9PM</h5>
                   <h5>Fri - Sat: 11AM - 10PM</h5>
                </div>
+               
+               <!-- ***** CONTACT US - SMALL SCREEN***** -->
+               <div class="col-12 contact-small-screen">
+                  <h3>Carmine's Pizzeria</h3>
+                  <h5>7615 Campbell Road, Ste 104</h5>
+                  <h5>Dallas, TX 75248</h5>
+                  <h3>972 248-8110</h3>
+                  <h5>cagupi@hotmail.com</h5>
+               </div>
+               <div class="col-12 contact-small-screen">
+                  <h3>Our Hours</h3>
+                  <h5>Sun - Mon: 4PM - 9PM</h5>
+                  <h5>Tue - Thu: 11AM - 9PM</h5>
+                  <h5>Fri - Sat: 11AM - 10PM</h5>
+               </div>
+               
+               
                <div class="col-12">
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.904803862959!2d-96.7710264848128!3d32.979913280911255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c21f31599055d%3A0x84676d9b9fdaa2aa!2sCarmine's+Pizzeria!5e0!3m2!1sen!2sph!4v1552235448006" 
                   allowfullscreen="allowfullscreen" frameborder="0"></iframe>
@@ -133,13 +187,13 @@
    
 
    <!-- ***** FOOTER ***** -->
-   <footer class="row">
-      <div class="container">
-         <div class="col-6">
+   <footer>
+      <div class="full-width">
+         <div class="grid-auto">
             <h6><i class="far fa-copyright"></i> 2020 Carmine's Pizzeria | All rights reserved.</h6>
          </div>
-         <div class="col-6">
-            <img src="/img/grafk.svg" alt="">
+         <div class="grid-auto">
+            <a href=""><img src="/img/grafk.svg" alt=""></a>
          </div>
       </div>
    </footer>
