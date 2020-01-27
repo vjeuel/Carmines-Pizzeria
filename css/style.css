@@ -132,11 +132,8 @@ nav .col-12 a:nth-child(5):hover {
    background-image: url(/img/iStock_000030291918_Full.jpg);
 }
 
-#big-logo {
-   grid-row: 1;
-}
-
 #big-logo .row {
+   grid-template-rows: repeat(4, auto);
    justify-items: center;
 }
 
@@ -182,6 +179,7 @@ nav .col-12 a:nth-child(5):hover {
    width: 100%;
    text-align: center;
    margin-top: 100px;
+   margin-bottom: 100px;
    background: #000000;
    background: linear-gradient(to right,
                rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%,
@@ -272,6 +270,8 @@ nav .col-12 a:nth-child(5):hover {
 }
 
 #menu .row {
+   grid-template-rows: repeat(2, auto);
+   grid-gap: 20px;
    padding: 0px;
    margin: 20px 0;
 }
@@ -288,87 +288,127 @@ nav .col-12 a:nth-child(5):hover {
 
 /* ABOUT US
 ----------------------------------------------- */
-#about-us .full-width {
+#about-contact .full-width {
    background-image: none;
-   padding-top: 50px;
    background: linear-gradient(135deg, var(--or) 0%,
    var(--pale) 20%, var(--pale) 80%, var(--or) 100%);
 }
 
-#about-us .row {
+#about-contact .row {
+   grid-template-rows: repeat(6, auto);
    justify-items: center;
    align-items: center;
-   margin: 50px;
-   padding: 0px;
+   padding-top: 100px;
 }
 
-#about-us img {
+#about-contact .col-12 {
+   margin-bottom: 40px;
+}
+
+#about-contact .col-6 {
+   margin-bottom: 120px;;
+}
+
+
+#about-contact img {
    box-sizing: border-box;
    width: 100%;
    border-radius: 20px;
    border: 4px solid var(--dg);
 }
 
-#about-us h1 {
+#about-contact h1 {
    color: var(--dg);
    border-bottom: 3px solid var(--dg);
    border-radius: 20px;
    padding: 0 30px;
 }
 
-#about-us h4 {
+#about-contact h4 {
    color: var(-dg);
    text-align: left;
    line-height: 1.5;
+   padding-left: 20px;;
+}
+
+
+/* REVIEWS - SLIDE-SHOW
+----------------------------------------------- */
+.slideshow {
+   width: 650px;
+   padding: 60px;
+   border-top: 2px solid var(--lg);
+   border-bottom: 2px solid var(--lg);
+   border-radius: 20px;
+   height: 250px;
+   display: grid;
+   grid-template-rows: 1fr;
+}
+
+.slideshow .review-no-slide {
+   grid-row: 1 / span 2;
+}
+
+.slide-1 {
+   background-color: var(--pale);
+   height: 250px;
+   animation: opacity cubic-bezier(1, 0, 0, 1) 10s infinite alternate;
+}
+
+@keyframes opacity {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+.slideshow i, .review-no-slide i {
+   color: var(--lg);
+   position: relative;
+   left: -20px;
+}
+
+.slideshow h6, .review-no-slide h6 {
+   text-align: left;
+   font-size: 1.5rem;
    padding-left: 20px;
+   margin-bottom: 80px;
 }
 
 
 /* CONTACT US
 ----------------------------------------------- */
-#contact-us .full-width {
-   background-image: none;
-   padding-top: 50px;
-   background: linear-gradient(135deg, var(--or) 0%,
-   var(--pale) 20%, var(--pale) 80%, var(--or) 100%);
+#about-contact .grid-2 {
+   margin-bottom: 40px;
 }
 
-#contact-us .row {
-   justify-items: center;
-   align-items: center;
-   margin: 50px;
-   padding: 0px;
-}
-
-#contact-us h1 {
-   color: var(--dg);
-   border-bottom: 3px solid var(--dg);
-   border-radius: 20px;
-   padding: 0 30px;
-}
-
-#contact-us .grid-2 {
-   border:  red solid 2px;
-   z-index: 2;
-}
-
-#contact-us iframe {
-   width: 100%;
+#about-contact iframe {
+   width: 100vw;
    height: 200px;
 }
 
-#contact-us h3 {
+#about-contact h3 {
    font-weight: 600;
    text-align: left;
+   font-size: 2.5rem;
 }
 
-#contact-us h5 {
+#about-contact h5 {
    text-align: left;
    line-height: 1;
+   font-size: 1.9rem;
 }
 
 
+/* FOOTER
+----------------------------------------------- */
+footer {
+   color: white;
 
+   border: red solid 2px
+}
 
 
 /* --------------------------------------------
