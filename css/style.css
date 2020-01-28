@@ -398,12 +398,13 @@ nav a:nth-child(5):hover {
 ----------------------------------------------- */
 footer {
    color: white;
+   width: 70px;
 }
 
 footer .full-width {
    background-image: none;
    background: linear-gradient(180deg, var(--dg) 0%, black 100%);
-   padding: 20px;
+   padding: 20px 0;
 }
 
 footer img {
@@ -527,11 +528,11 @@ footer .col-6:nth-child(2) {
 }
 
 @media (max-width: 576px) {
-   /* header .nav-large-screen {
+   header .nav-large-screen {
       display:  none;
-   } */
+   }
 
-   /* header .nav-small-screen {
+   header .nav-small-screen {
       width: 80%;
    }
 
@@ -563,9 +564,27 @@ footer .col-6:nth-child(2) {
 
    .new-hours {
       display: none;
-   } */
+   }
 
+   .byob {
+      padding: 60px 0;
+   }
 
+   .byob h1{
+      width: 250px;
+   }
+
+   .byob #purple {
+      font-size: 6.5rem;
+   }
+
+   .byob #cyan {
+      font-size: 6.5rem;
+   }
+
+   .byob #black {
+      font-size: 6.5rem;
+   }
 
  }
 
